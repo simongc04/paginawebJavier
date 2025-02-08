@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Gran apertura de la nueva sección de aves",
+        "description": "¡La nueva sección de aves ha sido inaugurada! Ven a ver las especies más raras del mundo.",
+        "image": "images/seccionAves.jpg"
+    },
+    {
+        "title": "Nacimiento de un nuevo león en el zoológico",
+        "description": "Una nueva camada de leones ha nacido en el zoológico. ¡Ven a conocer al bebé león!",
+        "image": "images/naciendo.jpg"
+    },
+    {
+        "title": "Nuevo evento de safaris nocturnos",
+        "description": "Te invitamos a un safari nocturno único. Vive la experiencia de la fauna en su hábitat natural durante la noche.",
+        "image": "images/nocturno.jpg"
+    },
+    {
+        "title": "El zoológico recibe una donación para conservación",
+        "description": "Gracias a la generosidad de los donantes, el zoológico podrá fortalecer sus programas de conservación animal.",
+        "image": "images/donacion.jpg"
+    }
+]

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animales - Zoo Haria</title>
+    <link rel="stylesheet" href="assets/animales.css">
+    <script defer src="assets/scripts.js"></script>
+</head>
+
+<body>
+    <!-- Header con menú -->
+    <header>
+        <div class="logo">
+            <h1>Zoo Haria</h1>
+        </div>
+
+        <li><a href="animalesEN.html" class="bandera"><img src="images/ingles.jpg" alt="Contacto"></a></li>
+
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Sobre Nosotros</a></li>
+                <li><a href="animales.html">Animales</a></li>
+                <li><a href="servicios.html">Servicios & Eventos</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de animales -->
+    <section class="animals-section">
+        <h2>Conoce a nuestros animales</h2>
+        <p>En nuestro zoo encontrarás una increíble variedad de animales, desde mamíferos hasta reptiles, cada uno con características fascinantes que los hacen únicos en su especie.</p>
+
+        <!-- Carrusel de imágenes -->
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="images/leon.jpg" alt="León" class="carousel-image">
+                <img src="images/elefante.jpg" alt="Elefante" class="carousel-image">
+                <img src="images/tigre.jpg" alt="Tigre" class="carousel-image">
+                <img src="images/aguila.jpg" alt="Águila" class="carousel-image">
+                <img src="images/flamenco.jpg" alt="Flamenco" class="carousel-image">
+                <img src="images/PavoReal.jpg" alt="Pavo real" class="carousel-image">
+                <img src="images/cocodrilo.jpg" alt="Cocodrilo" class="carousel-image">
+                <img src="images/serpiente.jpg" alt="Serpiente" class="carousel-image">
+                <img src="images/tortuga.jpg" alt="Tortuga" class="carousel-image">
+            </div>
+            <div class="carousel-controls">
+                <button class="prev-button">&#10094;</button>
+                <button class="next-button">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- Información sobre categorías de animales -->
+        <div class="animal-info">
+            <div class="category-info">
+                <label for="mammals-toggle" class="toggle-menu">Mamíferos</label>
+                <input type="checkbox" id="mammals-toggle" class="toggle-input">
+                <div class="dropdown">
+                    <ul class="dropdown-menu">
+                        <li><strong>León:</strong> El rey de la selva, conocido por su melena dorada y su rugido imponente.</li>
+                        <li><strong>Elefante:</strong> Un gigante de la sabana, famoso por su inteligencia y sus grandes orejas.</li>
+                        <li><strong>Tigre:</strong> El felino más grande, conocido por su fuerza y sus características rayas.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="category-info">
+                <label for="birds-toggle" class="toggle-menu">Aves</label>
+                <input type="checkbox" id="birds-toggle" class="toggle-input">
+                <div class="dropdown">
+                    <ul class="dropdown-menu">
+                        <li><strong>Águila:</strong> Un majestuoso ave rapaz con una visión increíble y habilidades de caza excepcionales.</li>
+                        <li><strong>Flamenco:</strong> Un ave de patas largas que se distingue por su color rosado y su largo cuello.</li>
+                        <li><strong>Pavo real:</strong> Famoso por su espectacular cola con plumas brillantes y hermosas.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="category-info">
+                <label for="reptiles-toggle" class="toggle-menu">Reptiles</label>
+                <input type="checkbox" id="reptiles-toggle" class="toggle-input">
+                <div class="dropdown">
+                    <ul class="dropdown-menu">
+                        <li><strong>Cocodrilo:</strong> Un depredador de agua, conocido por su gran tamaño y sus poderosas mandíbulas.</li>
+                        <li><strong>Serpiente:</strong> Reptil sin patas, famoso por su habilidad para deslizarse y su destreza en la caza.</li>
+                        <li><strong>Tortuga:</strong> Un animal con caparazón duro que se mueve lentamente, pero vive por mucho tiempo.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Zoo Haria. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>

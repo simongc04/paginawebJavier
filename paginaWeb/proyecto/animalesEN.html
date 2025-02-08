@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals - Zoo Haria</title>
+    <link rel="stylesheet" href="assets/animales.css">
+    <script defer src="assets/scripts.js"></script>
+</head>
+
+<body>
+    <!-- Header with menu -->
+    <header>
+        <div class="logo">
+            <h1>Zoo Haria</h1>
+        </div>
+
+        <li><a href="animales.html" class="bandera"><img src="images/españa.jpg" alt="Contact"></a></li>
+
+        <nav>
+            <ul class="nav-list">
+                <li><a href="indexEN.html">Home</a></li>
+                <li><a href="aboutEN.html">About Us</a></li>
+                <li><a href="animalesEN.html">Animals</a></li>
+                <li><a href="servciciosEN.html">Services & Events</a></li>
+                <li><a href="ContactoEN.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Animals section -->
+    <section class="animals-section">
+        <h2>Meet Our Animals</h2>
+        <p>In our zoo, you will find an amazing variety of animals, from mammals to reptiles, each with fascinating characteristics that make them unique in their species.</p>
+
+        <!-- Image carousel -->
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="images/leon.jpg" alt="Lion" class="carousel-image">
+                <img src="images/elefante.jpg" alt="Elephant" class="carousel-image">
+                <img src="images/tigre.jpg" alt="Tiger" class="carousel-image">
+                <img src="images/aguila.jpg" alt="Eagle" class="carousel-image">
+                <img src="images/flamenco.jpg" alt="Flamingo" class="carousel-image">
+                <img src="images/PavoReal.jpg" alt="Peacock" class="carousel-image">
+                <img src="images/cocodrilo.jpg" alt="Crocodile" class="carousel-image">
+                <img src="images/serpiente.jpg" alt="Snake" class="carousel-image">
+                <img src="images/tortuga.jpg" alt="Turtle" class="carousel-image">
+            </div>
+            <div class="carousel-controls">
+                <button class="prev-button">&#10094;</button>
+                <button class="next-button">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- Animal category information -->
+        <div class="animal-info">
+            <div class="category-info">
+                <label for="mammals-toggle" class="toggle-menu">Mammals</label>
+                <input type="checkbox" id="mammals-toggle" class="toggle-input">
+                <div class="dropdown">
+                    <ul class="dropdown-menu">
+                        <li><strong>Lion:</strong> The king of the jungle, known for its golden mane and mighty roar.</li>
+                        <li><strong>Elephant:</strong> A giant of the savannah, famous for its intelligence and large ears.</li>
+                        <li><strong>Tiger:</strong> The largest feline, known for its strength and characteristic stripes.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="category-info">
+                <label for="birds-toggle" class="toggle-menu">Birds</label>
+                <input type="checkbox" id="birds-toggle" class="toggle-input">
+                <div class="dropdown">
+                    <ul class="dropdown-menu">
+                        <li><strong>Eagle:</strong> A majestic bird of prey with incredible vision and exceptional hunting skills.</li>
+                        <li><strong>Flamingo:</strong> A long-legged bird known for its pink color and long neck.</li>
+                        <li><strong>Peacock:</strong> Famous for its spectacular tail with bright and beautiful feathers.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="category-info">
+                <label for="reptiles-toggle" class="toggle-menu">Reptiles</label>
+                <input type="checkbox" id="reptiles-toggle" class="toggle-input">
+                <div class="dropdown">
+                    <ul class="dropdown-menu">
+                        <li><strong>Crocodile:</strong> A water predator, known for its large size and powerful jaws.</li>
+                        <li><strong>Snake:</strong> A legless reptile, famous for its ability to slide and its hunting skills.</li>
+                        <li><strong>Turtle:</strong> An animal with a hard shell that moves slowly but lives a long life.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Zoo Haria. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

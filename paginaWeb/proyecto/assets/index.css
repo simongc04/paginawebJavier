@@ -1,0 +1,299 @@
+/* Reset de márgenes y rellenos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Header */
+header {
+  background-color: #2c7a2f;
+  color: white;
+  padding: 20px 40px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Menú desplegable */
+nav .dropdown {
+  position: relative;
+}
+
+nav .dropdown .dropbtn {
+  font-size: 1.3rem;
+  color: white;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav .dropdown:hover .dropbtn {
+  background-color: #3a9b3f;
+}
+
+nav .dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in, visibility 0.5s ease-in; /* Añadido efecto suave de aparición */
+}
+
+nav .dropdown .dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: #2c7a2f;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 1;
+  opacity: 0;  /* Hace que el submenú sea invisible al principio */
+  visibility: hidden;  /* Oculta el submenú cuando no está activo */
+  transition: opacity 0.5s ease-in, visibility 0.5s ease-in; /* Transición suave al aparecer */
+}
+
+nav .dropdown .dropdown-content a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  display: block;
+  font-size: 1.1rem;
+}
+
+nav .dropdown .dropdown-content a:hover {
+  background-color: #3a9b3f;
+  border-radius: 5px;
+}
+
+/* Sección principal */
+.main-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a6d3a;
+  color: white;
+  padding: 80px 40px;
+  margin-bottom: 40px;
+}
+
+.banner-content {
+  flex: 1;
+}
+
+.main-banner h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.main-banner p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.banner-image {
+  width: 100%;  
+  max-width: 800px;
+  height: 300px; 
+}
+
+.main-banner .banner-image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Enlaces de información */
+.info-links {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #eef2e6;
+}
+
+.info-links h3 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.link-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.link-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 250px;
+  text-align: center;
+}
+
+.link-card a {
+  text-decoration: none;
+  color: #2c7a2f;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.link-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.link-card a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: #2c7a2f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Estilo para la imagen pequeña */
+.small-flag {
+  width: 50px;  /* Ajusta el ancho de la bandera a 50px */
+  height: auto; /* Mantiene la proporción original */
+}
+
+.bandera img {
+  width: 100px;
+}
+
+/* Estilos responsive */
+
+@media screen and (max-width: 768px) {
+  header .logo h1 {
+      font-size: 2.2rem;
+  }
+
+  .main-banner {
+      flex-direction: column;
+      text-align: center;
+      padding: 60px 20px;
+  }
+
+  .banner-content h2 {
+      font-size: 2.5rem;
+  }
+
+  .main-banner .banner-image {
+      max-width: 100%;
+  }
+
+  .info-links h3 {
+      font-size: 2rem;
+  }
+
+  .link-container {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .link-card {
+      width: 100%;
+      max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header .logo h1 {
+      font-size: 1.8rem;
+  }
+
+  .main-banner h2 {
+      font-size: 2rem;
+  }
+
+  .main-banner p {
+      font-size: 1rem;
+  }
+
+  .banner-image-container {
+      margin-top: 20px;
+  }
+
+  .info-links h3 {
+      font-size: 1.6rem;
+  }
+
+  .link-card {
+      width: 100%;
+      max-width: 100%;
+  }
+}
+
+/* Estilos para pantallas más grandes (mayores a 1200px) */
+@media screen and (min-width: 1200px) {
+  header .logo h1 {
+    font-size: 3rem;
+  }
+
+  .main-banner {
+    padding: 100px 50px;
+  }
+
+  .main-banner h2 {
+    font-size: 3.5rem;
+  }
+
+  .banner-image {
+    max-width: 500px; /* Aumenta el tamaño de la imagen */
+  }
+
+  .info-links h3 {
+    font-size: 2.8rem;
+  }
+
+  .link-card {
+    width: 300px; /* Aumenta el ancho de las tarjetas */
+  }
+}

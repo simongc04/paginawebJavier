@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zoo>
+    <about>
+        <history>
+            <title>History of Zoo Maravillas</title>
+            <paragraph>Zoo Maravillas was founded in 1995 with the aim of preserving the most endangered species and educating the public about the importance of wildlife conservation. Since its opening, we have grown significantly and become a leader in animal care.</paragraph>
+            <paragraph>With over 200 species from around the world, the zoo continues to be a special place for those looking to connect with nature.</paragraph>
+        </history>
+        <mission>
+            <title>Mission</title>
+            <description>Our mission is to provide a safe and healthy environment for animals, promote environmental education, and contribute to species conservation through educational and research programs.</description>
+        </mission>
+        <vision>
+            <title>Vision</title>
+            <description>To be an international leader in wildlife conservation, offering a space that inspires future generations to care for and respect animals and their environment.</description>
+        </vision>
+    </about>
+
+    <images>
+        <image src="images/animaleZoo.jpg" alt="Animals at the zoo"/>
+        <image src="images/entornonatualzoo.jpg" alt="Natural environment of the zoo"/>
+        <image src="images/Educacióncuidadoanimales.webp" alt="Education and animal care"/>
+    </images>
+</zoo>

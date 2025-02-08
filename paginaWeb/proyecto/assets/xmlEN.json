@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Grand Opening of the New Bird Section",
+        "description": "The new bird section has been inaugurated! Come see the rarest species in the world.",
+        "image": "images/seccionAves.jpg"
+    },
+    {
+        "title": "Birth of a New Lion at the Zoo",
+        "description": "A new litter of lions has been born at the zoo. Come meet the baby lion!",
+        "image": "images/naciendo.jpg"
+    },
+    {
+        "title": "New Night Safari Event",
+        "description": "We invite you to a unique night safari. Experience wildlife in its natural habitat during the night.",
+        "image": "images/nocturno.jpg"
+    },
+    {
+        "title": "Zoo Receives Donation for Conservation",
+        "description": "Thanks to the generosity of our donors, the zoo will strengthen its animal conservation programs.",
+        "image": "images/donacion.jpg"
+    }
+]
