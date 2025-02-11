@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking FIP 2024</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Inicio</a></li>
+                <li class="submenu">
+                    <a href="#">Jugadores</a>
+                    <ul>
+                        <li><a href="#">Masculino</a></li>
+                        <li><a href="#">Femenino</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Torneos</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li class="busqueda">
+                    <input type="text" id="search" placeholder="Buscar jugador...">
+                    <button onclick="buscarJugador()">🔍</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="ranking">
+            <a onclick="mostrarJugador(-1)" class="nav-btn">&#60;</a>
+            <div id="cards"></div>
+            <a onclick="mostrarJugador(1)" class="nav-btn">&#62;</a>
+        </section>
+        <div class="pagination">
+            <span onclick="mostrarJugadorPorNumero(0)">1</span>
+            <span onclick="mostrarJugadorPorNumero(1)">2</span>
+            <span onclick="mostrarJugadorPorNumero(2)">3</span>
+            <span onclick="mostrarJugadorPorNumero(3)">4</span>
+            <span onclick="mostrarJugadorPorNumero(4)">5</span>
+            <span onclick="mostrarJugadorPorNumero(5)">6</span>
+            <span onclick="mostrarJugadorPorNumero(6)">7</span>
+            <span onclick="mostrarJugadorPorNumero(7)">8</span>
+            <span onclick="mostrarJugadorPorNumero(8)">9</span>
+            <span onclick="mostrarJugadorPorNumero(9)">10</span>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Realizado por: Simon Gonzalez Cabrera</p>        
+    </footer>
+</body>
+</html>
