@@ -1,0 +1,269 @@
+/* Reset de márgenes y rellenos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+.bandera img {
+    width: 100px;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #3b7d3a;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcb2f;
+}
+
+/* Sección de animales */
+.animals-section {
+    padding: 60px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.animals-section h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #2c7a2f;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.animals-section p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Carrusel */
+.carousel-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 10px;
+}
+
+/* Controles de navegación */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev-button, .next-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.2);
+}
+
+/* Información sobre las categorías de animales */
+.animal-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.category-info {
+    position: relative;
+    width: 32%;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #e9f5e5;
+}
+
+.category-info h3 {
+    font-size: 2.4rem;
+    color: #2c7a2f;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.category-info p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.category-info ul {
+    list-style-type: none;
+}
+
+.category-info ul li {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.category-info:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para los menús desplegables */
+.toggle-input {
+    display: none;
+}
+
+.toggle-menu {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2c7a2f;
+    cursor: pointer;
+    display: block;
+    padding: 10px 0;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 10px 20px;
+    z-index: 10;
+}
+
+.dropdown-menu li {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.toggle-input:checked + .dropdown .dropdown-menu {
+    display: block;
+}
+
+.category-info:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de Footer */
+footer {
+    background-color: #3b7d3a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos responsive */
+@media screen and (max-width: 768px) {
+    .carousel-image {
+        height: 350px;
+    }
+
+    .category-info {
+        width: 48%;
+    }
+
+    .animal-info {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carousel-image {
+        height: 250px;
+    }
+
+    .category-info {
+        width: 80%;
+    }
+
+    .carousel-container {
+        width: 90%;
+    }
+}
