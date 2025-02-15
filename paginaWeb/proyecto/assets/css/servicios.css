@@ -5,7 +5,9 @@
     box-sizing: border-box;
 }
 
-
+li {
+    list-style-type: none;
+}
 
 /* Body */
 body {
@@ -17,12 +19,7 @@ body {
 
 .bandera img {
     width: 100px;
-  }
-
-  
-li {
-    list-style-type: none;
-  }
+}
 
 /* Header */
 header {
@@ -87,15 +84,16 @@ nav ul li a:hover {
 }
 
 .service-cards {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    flex-wrap: wrap;
+    justify-items: center;
 }
 
 .service-card {
     background-color: white;
-    width: 30%;
+    width: 100%;
+    max-width: 400px;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
@@ -144,15 +142,16 @@ nav ul li a:hover {
 }
 
 .event-cards {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    flex-wrap: wrap;
+    justify-items: center;
 }
 
 .event-card {
     background-color: white;
-    width: 30%;
+    width: 100%;
+    max-width: 400px;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
@@ -196,3 +195,134 @@ footer {
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilos responsive */
+@media (max-width: 1200px) {
+    header .logo h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        font-size: 1.1rem;
+    }
+
+    .services h2 {
+        font-size: 2.5rem;
+    }
+
+    .services p {
+        font-size: 1.1rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .service-card p {
+        font-size: 0.9rem;
+    }
+
+    .events h2 {
+        font-size: 2.5rem;
+    }
+
+    .events p {
+        font-size: 1.1rem;
+    }
+
+    .event-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .event-card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 20px;
+    }
+
+    header .logo h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .services h2 {
+        font-size: 2.2rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .service-card p {
+        font-size: 0.8rem;
+    }
+
+    .events h2 {
+        font-size: 2.2rem;
+    }
+
+    .event-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .event-card p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px 10px;
+    }
+
+    header .logo h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    .services h2 {
+        font-size: 2rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .service-card p {
+        font-size: 0.7rem;
+    }
+
+    .events h2 {
+        font-size: 2rem;
+    }
+
+    .event-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .event-card p {
+        font-size: 0.7rem;
+    }
+
+    .service-cards, .event-cards {
+        grid-template-columns: 1fr;
+    }
+}

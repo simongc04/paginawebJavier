@@ -14,7 +14,7 @@ body {
 
 li {
     list-style-type: none;
-  }
+}
 
 .bandera img {
     width: 100px;
@@ -80,14 +80,15 @@ nav ul li a:hover {
 /* Sección de misión y visión */
 .mission-vision {
     padding: 70px 20px;
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
     background-color: #ffffff;
 }
 
 .mission,
 .vision {
-    width: 45%;
+    text-align: center;
 }
 
 .mission h3,
@@ -119,14 +120,14 @@ nav ul li a:hover {
 }
 
 .gallery {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    flex-wrap: wrap;
+    justify-items: center;
 }
 
 .gallery img {
-    width: 300px;
+    width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
@@ -144,21 +145,18 @@ footer {
 }
 
 /* Estilos responsive */
-
 @media screen and (max-width: 768px) {
     .mission-vision {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
     }
 
     .mission,
     .vision {
-        width: 80%;
         margin-bottom: 20px;
     }
 
     .gallery {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 
     .gallery img {

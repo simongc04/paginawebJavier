@@ -74,7 +74,7 @@ nav .dropdown:hover .dropbtn {
 nav .dropdown:hover .dropdown-content {
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.5s ease-in, visibility 0.5s ease-in; /* Añadido efecto suave de aparición */
+  transition: opacity 0.5s ease-in, visibility 0.5s ease-in;
 }
 
 nav .dropdown .dropdown-content {
@@ -85,9 +85,9 @@ nav .dropdown .dropdown-content {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   z-index: 1;
-  opacity: 0;  /* Hace que el submenú sea invisible al principio */
-  visibility: hidden;  /* Oculta el submenú cuando no está activo */
-  transition: opacity 0.5s ease-in, visibility 0.5s ease-in; /* Transición suave al aparecer */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in, visibility 0.5s ease-in;
 }
 
 nav .dropdown .dropdown-content a {
@@ -105,8 +105,9 @@ nav .dropdown .dropdown-content a:hover {
 
 /* Sección principal */
 .main-banner {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   align-items: center;
   background-color: #1a6d3a;
   color: white;
@@ -130,9 +131,9 @@ nav .dropdown .dropdown-content a:hover {
 }
 
 .banner-image {
-  width: 100%;  
+  width: 100%;
   max-width: 800px;
-  height: 300px; 
+  height: 300px;
 }
 
 .main-banner .banner-image {
@@ -156,9 +157,10 @@ nav .dropdown .dropdown-content a:hover {
 }
 
 .link-container {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
+  justify-items: center;
 }
 
 .link-card {
@@ -167,7 +169,8 @@ nav .dropdown .dropdown-content a:hover {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 250px;
+  width: 100%;
+  max-width: 250px;
   text-align: center;
 }
 
@@ -197,11 +200,10 @@ footer {
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 /* Estilo para la imagen pequeña */
 .small-flag {
-  width: 50px;  /* Ajusta el ancho de la bandera a 50px */
-  height: auto; /* Mantiene la proporción original */
+  width: 50px;
+  height: auto;
 }
 
 .bandera img {
@@ -209,4 +211,74 @@ footer {
 }
 
 /* Estilos responsive */
+@media (max-width: 1200px) {
+  .main-banner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 
+  .banner-image {
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  header .logo h1 {
+    font-size: 2.2rem;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  .main-banner h2 {
+    font-size: 2.5rem;
+  }
+
+  .main-banner p {
+    font-size: 1.2rem;
+  }
+
+  .link-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  header .logo h1 {
+    font-size: 1.8rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .main-banner {
+    padding: 60px 20px;
+  }
+
+  .main-banner h2 {
+    font-size: 2rem;
+  }
+
+  .main-banner p {
+    font-size: 1rem;
+  }
+
+  .link-card {
+    width: 90%;
+  }
+}

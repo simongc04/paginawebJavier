@@ -7,7 +7,7 @@
 
 li {
     list-style-type: none;
-  }
+}
 
 /* Estilos generales */
 body {
@@ -63,13 +63,13 @@ nav ul li a:hover {
 }
 
 .small-flag {
-    width: 50px;  /* Ajusta el ancho de la bandera a 50px */
-    height: auto; /* Mantiene la proporción original */
-  }
-  
-  .bandera img {
+    width: 50px;
+    height: auto;
+}
+
+.bandera img {
     width: 100px;
-  }
+}
 
 /* Sección de Noticias */
 .news-section {
@@ -97,10 +97,10 @@ nav ul li a:hover {
 
 /* Contenedor de noticias */
 .news-container {
-    display: flex;
-    justify-content: center; /* Centra las tarjetas de noticias */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en diferentes filas */
+    justify-items: center;
     margin-top: 40px;
     padding: 0 20px;
 }
@@ -117,7 +117,7 @@ nav ul li a:hover {
     position: relative;
     z-index: 1;
     width: 100%;
-    max-width: 350px; /* Limitamos el tamaño máximo de cada tarjeta */
+    max-width: 350px;
 }
 
 .news-item:hover {
@@ -159,8 +159,6 @@ footer {
     box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
 }
 
-
-
 .news-item {
     animation: fadeIn 0.6s ease-in-out;
 }
@@ -182,3 +180,86 @@ button:hover {
     transform: translateY(-3px);
 }
 
+/* Estilos responsive */
+@media (max-width: 1200px) {
+    header .logo h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        font-size: 1.1rem;
+    }
+
+    .news-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .news-section p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 20px;
+    }
+
+    header .logo h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .news-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .news-item h3 {
+        font-size: 1.6rem;
+    }
+
+    .news-item p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px 10px;
+    }
+
+    header .logo h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    .news-section h2 {
+        font-size: 2rem;
+    }
+
+    .news-item h3 {
+        font-size: 1.4rem;
+    }
+
+    .news-item p {
+        font-size: 0.8rem;
+    }
+
+    .news-container {
+        grid-template-columns: 1fr;
+    }
+}
