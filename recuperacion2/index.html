@@ -10,6 +10,9 @@
 <body>
     <header>
         <nav>
+            <div class="logo">
+                <img src="IMAGE/logo.png" alt="Logo Federación">
+            </div>
             <ul class="menu">
                 <li><a href="#">Inicio</a></li>
                 <li class="submenu">
@@ -25,15 +28,28 @@
                     <input type="text" id="search" placeholder="Buscar jugador...">
                     <button onclick="buscarJugador()">🔍</button>
                 </li>
+                <li class="idioma">
+                    <select id="language">
+                        <option value="es">Español</option>
+                        <option value="en">English</option>
+                    </select>
+                </li>
+                <li class="social">
+                    <a href="#"><img src="IMAGE/FACEBOOK.png" alt="Facebook"></a>
+                    <a href="#"><img src="IMAGE/twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="IMAGE/Instagram.png" alt="Instagram"></a>
+                </li>
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <section class="ranking">
-            <a onclick="mostrarJugador(-1)" class="nav-btn">&#60;</a>
+            <div class="nav-buttons">
+                <a onclick="mostrarJugador(-1)" class="nav-btn">&#60;</a>
+                <a onclick="mostrarJugador(1)" class="nav-btn">&#62;</a>
+            </div>
             <div id="cards"></div>
-            <a onclick="mostrarJugador(1)" class="nav-btn">&#62;</a>
         </section>
         <div class="pagination">
             <span onclick="mostrarJugadorPorNumero(0)">1</span>
@@ -48,9 +64,9 @@
             <span onclick="mostrarJugadorPorNumero(9)">10</span>
         </div>
     </main>
-    
+
     <footer>
-        <p>Realizado por: Simon Gonzalez Cabrera</p>        
+        <p>Realizado por: Simon Gonzalez Cabrera</p>
     </footer>
 </body>
 </html>

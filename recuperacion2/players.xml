@@ -46,7 +46,7 @@
         <bandera>https://www.padelfip.com/wp-content/uploads/2023/02/Argentina_Fip.jpg</bandera>
         <abreviatura>ARG</abreviatura>
         <puntos>8750</puntos>
-        <img>https://www.padelfip.com/wp-content/uploads/2023/02/06-STUPA.png</img>
+        <img>https://www.padelfip.com/wp-content/uploads/2023/02/06-STUPACZUK.png</img>
     </jugador>
     <jugador>
         <nombre>Paquito Navarro</nombre>
@@ -65,19 +65,19 @@
         <img>https://www.padelfip.com/wp-content/uploads/2023/02/08-CHINGOTTO.png</img>
     </jugador>
     <jugador>
-        <nombre>Momo González</nombre>
+        <nombre>Francisco Navarro</nombre>
         <rank>9</rank>
         <bandera>https://www.padelfip.com/wp-content/uploads/2023/02/Spain_Fip.jpg</bandera>
-        <abreviatura>ESP</abreviatura>
-        <puntos>7790</puntos>
-        <img>https://www.padelfip.com/wp-content/uploads/2023/02/09-MOMO.png</img>
+        <abreviatura>ARG</abreviatura>
+        <puntos>5310</puntos>
+        <img>https://www.padelfip.com/wp-content/uploads/2023/02/Francisco-Navarro_2-1.png</img>
     </jugador>
     <jugador>
-        <nombre>Álex Ruiz</nombre>
+        <nombre>Jon Sanz</nombre>
         <rank>10</rank>
         <bandera>https://www.padelfip.com/wp-content/uploads/2023/02/Spain_Fip.jpg</bandera>
         <abreviatura>ESP</abreviatura>
-        <puntos>7635</puntos>
-        <img>https://www.padelfip.com/wp-content/uploads/2023/02/10-RUIZ.png</img>
+        <puntos>2855</puntos>
+        <img>https://www.padelfip.com/wp-content/uploads/2023/02/22-SANZ.png</img>
     </jugador>
 </jugadores>

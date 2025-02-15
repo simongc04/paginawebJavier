@@ -1,4 +1,3 @@
-
 let jugadores = [];
 let indiceActual = 0;
 
@@ -46,12 +45,12 @@ function mostrarJugador(num) {
         </div>
         <div id='datos'>
             <div id='datos-pais'>
-                <div id='img-pais'><img src='${jugador.bandera}'></div>
+                <div id='img-pais'><img src='${jugador.bandera}' alt='Bandera de ${jugador.abreviatura}'></div>
                 <div id='abreviatura'>${jugador.abreviatura}</div>
             </div>
             <div id='puntos'>Puntos: <span id='points'>${jugador.puntos}</span></div>
         </div>
-        <div id='imagen'><img src='${jugador.img}'></div>
+        <div id='imagen'><img src='${jugador.img}' alt='Imagen de ${jugador.nombre}'></div>
     `;
 
     document.getElementById("cards").innerHTML = tarjeta;
