@@ -3,6 +3,11 @@ let indiceActual = 0;
 
 document.addEventListener("DOMContentLoaded", function() {
     cargarJugadores();
+
+    // Añadir evento para el menú hamburguesa
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        document.getElementById('menu').classList.toggle('active');
+    });
 });
 
 function cargarJugadores() {
@@ -71,4 +76,13 @@ function buscarJugador() {
 function mostrarJugadorPorNumero(numero) {
     indiceActual = numero;
     mostrarJugador(0);
+}
+
+function cambiarIdioma() {
+    let idiomaSeleccionado = document.getElementById("language").value;
+    if (idiomaSeleccionado === "en") {
+        // Cambiar textos al inglés
+    } else {
+        // Cambiar textos al español
+    }
 }

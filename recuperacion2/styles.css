@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background-color: #1E87C3;
+    background-color: #003366; /* Color de fondo del menú */
     padding: 10px 0;
 }
 
@@ -21,6 +21,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    position: relative;
 }
 
 .logo img {
@@ -47,19 +48,19 @@ nav {
 }
 
 .menu a:hover {
-    background-color: #2685B7;
+    background-color: #005792; /* Color de fondo al pasar el ratón */
     border-radius: 5px;
 }
 
 .submenu ul {
     display: none;
     position: absolute;
-    background: #1E87C3;
+    background: #003366; /* Color de fondo del submenú */
     list-style: none;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* Asegura que el submenú esté por encima de otros elementos */
+    z-index: 1000;
 }
 
 .submenu:hover ul {
@@ -72,11 +73,12 @@ nav {
 }
 
 .submenu ul li a:hover {
-    background-color: #2685B7;
+    background-color: #005792;
 }
 
 .busqueda {
     display: flex;
+    align-items: center;
 }
 
 .busqueda input {
@@ -109,6 +111,20 @@ nav {
     height: 30px;
 }
 
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
 .ranking {
     display: flex;
     align-items: center;
@@ -119,14 +135,22 @@ nav {
 
 .nav-buttons {
     display: flex;
-    flex-direction: column;
-    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-buttons.left {
+    order: -1; /* Asegura que el botón izquierdo esté a la izquierda */
+}
+
+.nav-buttons.right {
+    order: 1; /* Asegura que el botón derecho esté a la derecha */
 }
 
 .nav-btn {
     font-size: 40px;
     cursor: pointer;
-    margin: 10px 0;
+    margin: 0 10px;
     transition: color 0.3s ease;
 }
 
@@ -173,19 +197,29 @@ nav {
 }
 
 footer {
-    background: #1E87C3;
+    background: #003366;
     padding: 20px;
 }
 
 @media (max-width: 768px) {
-    nav {
+    .menu {
+        display: none;
         flex-direction: column;
-        align-items: flex-start;
+        width: 100%;
+        background: #003366;
     }
 
-    .menu {
-        flex-direction: column;
-        align-items: flex-start;
+    .menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu.active {
+        display: flex;
     }
 
     .busqueda, .idioma, .social {

@@ -13,23 +13,25 @@
             <div class="logo">
                 <img src="IMAGE/logo.png" alt="Logo Federación">
             </div>
-            <ul class="menu">
-                <li><a href="#">Inicio</a></li>
-                <li class="submenu">
-                    <a href="#">Jugadores</a>
-                    <ul>
-                        <li><a href="#">Masculino</a></li>
-                        <li><a href="#">Femenino</a></li>
-                    </ul>
-                </li>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu" id="menu">
+                <li><a href="#">Nosotros</a></li>
                 <li><a href="#">Torneos</a></li>
-                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Rankings</a></li>
+                <li><a href="#">Federaciones</a></li>
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">Prensa & Media</a></li>
+                <li><a href="#">Courses</a></li>
                 <li class="busqueda">
-                    <input type="text" id="search" placeholder="Buscar jugador...">
+                    <input type="text" id="search" placeholder="Buscar...">
                     <button onclick="buscarJugador()">🔍</button>
                 </li>
                 <li class="idioma">
-                    <select id="language">
+                    <select id="language" onchange="cambiarIdioma()">
                         <option value="es">Español</option>
                         <option value="en">English</option>
                     </select>
@@ -41,15 +43,19 @@
                 </li>
             </ul>
         </nav>
+        
+        
     </header>
 
     <main>
         <section class="ranking">
-            <div class="nav-buttons">
+            <div class="nav-buttons left">
                 <a onclick="mostrarJugador(-1)" class="nav-btn">&#60;</a>
-                <a onclick="mostrarJugador(1)" class="nav-btn">&#62;</a>
             </div>
             <div id="cards"></div>
+            <div class="nav-buttons right">
+                <a onclick="mostrarJugador(1)" class="nav-btn">&#62;</a>
+            </div>
         </section>
         <div class="pagination">
             <span onclick="mostrarJugadorPorNumero(0)">1</span>
