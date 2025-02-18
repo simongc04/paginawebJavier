@@ -9,6 +9,25 @@
 </head>
 <body>
     <header>
+        <nav class="top-menu">
+            <ul>
+                <li><a href="#">PLAYERS AREA</a></li>
+                <li class="idioma">
+                    <select id="language" onchange="cambiarIdioma()">
+                        <option value="es">🇪🇸</option>
+                        <option value="en">🇬🇧</option>
+                    </select>
+                </li>
+                <li class="social">
+                    <a href="#"><img src="IMAGE/FACEBOOK.png" alt="Facebook"></a>
+                    <a href="#"><img src="IMAGE/twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="IMAGE/Instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="IMAGE/youtube.png" alt="youtube"></a>
+                    <a href="#"><img src="IMAGE/tiktok.png" alt="tiktok"></a>
+                    <a href="#"><img src="IMAGE/whatsap.png" alt="whatsap"></a>
+                </li>
+            </ul>
+        </nav>
         <nav>
             <div class="logo">
                 <img src="IMAGE/logo.png" alt="Logo Federación">
@@ -19,8 +38,23 @@
                 <span></span>
             </div>
             <ul class="menu" id="menu">
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Torneos</a></li>
+                <li class="submenu">
+                    <a href="#">Nosotros</a>
+                    <ul>
+                        <li><a href="#">Quiénes somos</a></li>
+                        <li><a href="#">Cuadro de honor</a></li>
+                        <li><a href="#">Contactos</a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#">Torneos</a>
+                    <ul>
+                        <li><a href="#">Torneo 1</a></li>
+                        <li><a href="#">Torneo 2</a></li>
+                        <li><a href="#">Torneo 3</a></li>
+                        <li><a href="#">Calendario de Torneos</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Rankings</a></li>
                 <li><a href="#">Federaciones</a></li>
                 <li><a href="#">Documentation</a></li>
@@ -30,21 +64,8 @@
                     <input type="text" id="search" placeholder="Buscar...">
                     <button onclick="buscarJugador()">🔍</button>
                 </li>
-                <li class="idioma">
-                    <select id="language" onchange="cambiarIdioma()">
-                        <option value="es">Español</option>
-                        <option value="en">English</option>
-                    </select>
-                </li>
-                <li class="social">
-                    <a href="#"><img src="IMAGE/FACEBOOK.png" alt="Facebook"></a>
-                    <a href="#"><img src="IMAGE/twitter.png" alt="Twitter"></a>
-                    <a href="#"><img src="IMAGE/Instagram.png" alt="Instagram"></a>
-                </li>
             </ul>
         </nav>
-        
-        
     </header>
 
     <main>

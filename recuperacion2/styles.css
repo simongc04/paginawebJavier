@@ -14,8 +14,74 @@ body {
 header {
     background-color: #003366; /* Color de fondo del menú */
     padding: 10px 0;
+    padding: 0; /* Si hay padding extra, también se lo eliminamos */
+
 }
 
+.top-menu {
+    background-color: black; /* Color de fondo del menú superior */
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
+    padding: 0; /* Esto elimina el padding, si es necesario */
+}
+
+.top-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.top-menu ul li:first-child {
+    margin-right: auto; /* Empuja el primer elemento hacia la izquierda */
+}
+
+.top-menu ul li {
+    margin: 0 5px;
+}
+
+
+.top-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+.top-menu ul li a:hover {
+    background-color: #333; /* Color de fondo al pasar el ratón */
+    border-radius: 5px;
+}
+
+/* Esto es opcional, pero puede ayudar a asegurar que los elementos estén más ajustados a la derecha */
+.idioma {
+    display: flex;
+    align-items: center;
+    border-radius: 100%; /* Esto hace que el contorno sea circular */
+
+
+}
+
+.social{
+    display: flex;
+    align-items: center;
+}
+
+.social a {
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.social img {
+    width: 30px; /* Ajusta el tamaño del icono */
+    height: 30px; /* Ajusta el tamaño del icono */
+    border-radius: 50%; /* Hace la imagen circular */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+}
 nav {
     display: flex;
     justify-content: space-between;
@@ -52,29 +118,49 @@ nav {
     border-radius: 5px;
 }
 
+/* Submenú */
+.submenu {
+    position: relative; /* Necesario para el posicionamiento correcto del submenú */
+}
+
 .submenu ul {
     display: none;
     position: absolute;
-    background: #003366; /* Color de fondo del submenú */
+    background-color: white; /* Fondo blanco para el submenú */
     list-style: none;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
+    min-width: 180px; /* Asegura que el submenú no se estreche demasiado */
+    top: 100%; /* Alinea el submenú justo debajo del contenedor */
+    left: 0; /* Alinea el submenú con el borde izquierdo del contenedor */
+    margin-top: 10px; /* Separación adicional entre el submenú y el menú principal */
 }
 
 .submenu:hover ul {
-    display: block;
+    display: block; /* Mostrar el submenú cuando el ratón pasa sobre el contenedor */
+}
+
+.submenu ul li {
+    padding: 10px 0; /* Mayor separación entre los elementos */
 }
 
 .submenu ul li a {
     padding: 10px 15px;
     border-radius: 5px;
+    color: black; /* Color de texto en negro */
+    font-weight: normal; /* Textos menos pesados */
+    display: block; /* Hace que el área del enlace sea más fácil de hacer clic */
+    transition: background-color 0.3s ease;
 }
 
 .submenu ul li a:hover {
-    background-color: #005792;
+    background-color: #005792; /* Color de fondo al pasar el ratón */
+    color: white; /* Cambia el texto a blanco al hacer hover */
 }
+
+
 
 .busqueda {
     display: flex;
@@ -104,11 +190,11 @@ nav {
 }
 
 .social a {
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 .social img {
-    height: 30px;
+    height: 25px;
 }
 
 .menu-toggle {
@@ -160,12 +246,14 @@ nav {
 
 #cards {
     background: #2685B7;
-    padding: 20px;
+    padding: 10px; /* Reduce el padding para hacer el contenedor más pequeño */
     border-radius: 10px;
     display: flex;
     align-items: center;
-    width: 80%;
+    width: 50%; /* Ajusta el ancho del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
 }
+
 
 #pos-nombre, #datos, #imagen {
     margin-right: 20px;
@@ -175,6 +263,13 @@ nav {
     display: flex;
     align-items: center;
 }
+#imagen img {
+    height: 500px; /* Ajusta el valor según el tamaño que desees */
+    width: auto;   /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Esto asegura que la imagen no se distorsione */
+
+}
+
 
 #img-pais img {
     height: 30px;
@@ -199,6 +294,17 @@ nav {
 footer {
     background: #003366;
     padding: 20px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+footer p {
+    margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -260,6 +366,6 @@ footer {
     }
 
     .social img {
-        height: 25px;
+        height: 20px;
     }
 }
