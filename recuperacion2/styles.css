@@ -13,21 +13,19 @@ body {
 
 header {
     background-color: #003366; /* Color de fondo del menú */
-    padding: 10px 0;
-    padding: 0; /* Si hay padding extra, también se lo eliminamos */
-
 }
 
 .top-menu {
     background-color: black; /* Color de fondo del menú superior */
+    display: flex;
     justify-content: flex-end; /* Alinea los elementos a la derecha */
-    padding: 0; /* Esto elimina el padding, si es necesario */
+    padding: 0;
 }
 
 .top-menu ul {
     list-style: none;
     display: flex;
-    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    justify-content: space-between; /* Distribuye los elementos a los extremos */
     align-items: center;
     padding: 0;
     margin: 0;
@@ -42,7 +40,6 @@ header {
     margin: 0 5px;
 }
 
-
 .top-menu ul li a {
     color: white;
     text-decoration: none;
@@ -53,20 +50,29 @@ header {
 }
 
 .top-menu ul li a:hover {
-    background-color: #333; /* Color de fondo al pasar el ratón */
+    background-color: #333;
     border-radius: 5px;
 }
 
-/* Esto es opcional, pero puede ayudar a asegurar que los elementos estén más ajustados a la derecha */
+.top-menu ul li img[alt="1"] {
+    width: 15px;  /* Ajusta este valor para hacer la imagen más pequeña */
+    height: 15px; /* Ajusta este valor para hacer la imagen más pequeña */
+}
+
 .idioma {
     display: flex;
     align-items: center;
-    border-radius: 100%; /* Esto hace que el contorno sea circular */
-
-
 }
 
-.social{
+.idioma select {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background: white;
+    color: black;
+}
+
+.social {
     display: flex;
     align-items: center;
 }
@@ -82,12 +88,18 @@ header {
     border-radius: 50%; /* Hace la imagen circular */
     object-fit: cover; /* Mantiene la proporción de la imagen */
 }
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     position: relative;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
 }
 
 .logo img {
@@ -118,52 +130,50 @@ nav {
     border-radius: 5px;
 }
 
-/* Submenú */
 .submenu {
-    position: relative; /* Necesario para el posicionamiento correcto del submenú */
+    position: relative;
 }
 
 .submenu ul {
     display: none;
     position: absolute;
-    background-color: white; /* Fondo blanco para el submenú */
+    background-color: white;
     list-style: none;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    min-width: 180px; /* Asegura que el submenú no se estreche demasiado */
-    top: 100%; /* Alinea el submenú justo debajo del contenedor */
-    left: 0; /* Alinea el submenú con el borde izquierdo del contenedor */
-    margin-top: 10px; /* Separación adicional entre el submenú y el menú principal */
+    min-width: 180px;
+    top: 100%;
+    left: 0;
+    margin-top: 10px;
 }
 
 .submenu:hover ul {
-    display: block; /* Mostrar el submenú cuando el ratón pasa sobre el contenedor */
+    display: block;
 }
 
 .submenu ul li {
-    padding: 10px 0; /* Mayor separación entre los elementos */
+    padding: 10px 0;
 }
 
 .submenu ul li a {
     padding: 10px 15px;
     border-radius: 5px;
-    color: black; /* Color de texto en negro */
-    font-weight: normal; /* Textos menos pesados */
-    display: block; /* Hace que el área del enlace sea más fácil de hacer clic */
+    color: black;
+    font-weight: normal;
+    display: block;
     transition: background-color 0.3s ease;
 }
 
 .submenu ul li a:hover {
-    background-color: #005792; /* Color de fondo al pasar el ratón */
-    color: white; /* Cambia el texto a blanco al hacer hover */
+    background-color: #005792;
+    color: white;
 }
 
-/* Estilos para el submenú anidado */
 .submenu ul .submenu-right {
     position: absolute;
-    left: 100%; /* Hace que el submenú aparezca a la derecha */
+    left: 100%;
     top: 0;
     display: none;
     background-color: white;
@@ -194,11 +204,11 @@ nav {
     color: white;
 }
 
-
-
 .busqueda {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    flex: 1;
 }
 
 .busqueda input {
@@ -213,22 +223,6 @@ nav {
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 5px;
-}
-
-.idioma select {
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
-    background: white;
-    color: black;
-}
-
-.social a {
-    margin: 0 5px;
-}
-
-.social img {
-    height: 25px;
 }
 
 .menu-toggle {
@@ -248,29 +242,25 @@ nav {
 .ranking {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Centra los elementos en el eje horizontal */
     margin: 20px 0;
     position: relative;
 }
 
 .nav-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centra los botones */
     align-items: center;
 }
 
-.nav-buttons.left {
-    order: -1; /* Asegura que el botón izquierdo esté a la izquierda */
-}
-
-.nav-buttons.right {
-    order: 1; /* Asegura que el botón derecho esté a la derecha */
+.nav-buttons.left, .nav-buttons.right {
+    margin: 0 20px; /* Espaciado entre los botones */
 }
 
 .nav-btn {
     font-size: 40px;
     cursor: pointer;
-    margin: 0 10px;
+    margin: 0px 10px; /* Espaciado entre los botones */
     transition: color 0.3s ease;
 }
 
@@ -280,14 +270,13 @@ nav {
 
 #cards {
     background: #2685B7;
-    padding: 10px; /* Reduce el padding para hacer el contenedor más pequeño */
+    padding: 10px;
     border-radius: 10px;
     display: flex;
     align-items: center;
-    width: 50%; /* Ajusta el ancho del contenedor */
-    margin: 0 auto; /* Centra el contenedor */
+    width: 50%;
+    margin: 30px auto; 
 }
-
 
 #pos-nombre, #datos, #imagen {
     margin-right: 20px;
@@ -297,13 +286,12 @@ nav {
     display: flex;
     align-items: center;
 }
+
 #imagen img {
-    height: 500px; /* Ajusta el valor según el tamaño que desees */
-    width: auto;   /* Mantiene la proporción de la imagen */
-    object-fit: cover; /* Esto asegura que la imagen no se distorsione */
-
+    height: 500px;
+    width: auto;
+    object-fit: cover;
 }
-
 
 #img-pais img {
     height: 30px;
@@ -345,21 +333,40 @@ footer p {
     .menu {
         display: none;
         flex-direction: column;
-        width: 100%;
+        width: 60%;
         background: #003366;
-    }
-
-    .menu li {
-        width: 100%;
-        text-align: center;
-    }
-
-    .menu-toggle {
-        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 10px 0;
+        z-index: 1000;
     }
 
     .menu.active {
         display: flex;
+    }
+
+    .menu li {
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .logo {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+        order: -1;
+    }
+
+    .busqueda {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
     }
 
     .busqueda, .idioma, .social {
@@ -368,6 +375,13 @@ footer p {
 
     .ranking {
         flex-direction: column;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
     }
 
     .nav-buttons {
@@ -388,8 +402,14 @@ footer p {
         margin-right: 0;
         margin-bottom: 20px;
     }
+
+    /* OCULTAR IMÁGENES DE REDES SOCIALES EN PANTALLAS PEQUEÑAS */
+    .social {
+        display: none;  /* Esto oculta todo el contenedor de redes sociales */
+    }
 }
 
+/* Media Query para pantallas muy pequeñas (máximo 480px) */
 @media (max-width: 480px) {
     .menu a {
         font-size: 14px;
